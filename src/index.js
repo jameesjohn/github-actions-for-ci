@@ -11,7 +11,7 @@ while (!p2 && p1 !== p2) {
     : 'Enter player 2 name:')
 }
 
-//this is Wisdom Ekpot Playing around
+// this is Wisdom Ekpot Playing around
 window.onload = () => {
   const game = new Game(p1, p2)
   const turn = document.getElementById('turn')
