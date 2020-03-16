@@ -1,12 +1,13 @@
 name: Team awesome's approval workflow
-on: "pull_request_review"
+on:
+  pull_request:
+    types:
+      - labeled
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
     steps:
-      - name: Assign to reviewer
-        uses: pullreminders/assignee-to-reviewer-action@v1.0.4
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          APPROVALS: "1"
-          ADD_LABEL: "LGTM!"
+      - name: Comment on PR
+        uses: ./.github/actions/commentOnPR
+        with:
+          repo-token: ${{secrets.GITHUB_TOKEN}}

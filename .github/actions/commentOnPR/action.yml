@@ -1,0 +1,9 @@
+name: "Comment on Pull Request"
+
+description: "This action will comment on a Pull Request when it has been labelled."
+
+
+runs:
+  using: "node12"
+  main: "main.js"
+
