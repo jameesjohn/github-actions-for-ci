@@ -1,5 +1,5 @@
 import Game from './game.js'
-
+// add a simple comment
 let p1, p2
 while (!p1) {
   p1 = window.prompt('Enter player 1 name:')
@@ -11,6 +11,7 @@ while (!p2 && p1 !== p2) {
     : 'Enter player 2 name:')
 }
 
+// this is Wisdom Ekpot Playing around
 window.onload = () => {
   const game = new Game(p1, p2)
   const turn = document.getElementById('turn')
